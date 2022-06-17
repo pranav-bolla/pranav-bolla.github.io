@@ -114,8 +114,11 @@ function ballReset() {
 		p2 = 0;
 		winScreen = true;
 	}
-	ballSpeedX *= 1;
-	ballSpeedX = 5;
+	var one = 1;
+	if(p1 < p2){
+		one *= 1;
+	}
+	ballSpeedX = 5 * one;
 	ballSpeedY = 3;
 	ballX = canvas.width/2;
 	ballY = canvas.height/2;
