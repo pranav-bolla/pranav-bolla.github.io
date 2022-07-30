@@ -65,6 +65,7 @@ var paddle2Y = 250;
 const WIN = 3;
 const PADDLE_HEIGHT = 100;
 const THICKNESS = 20;
+var one = 1;
 
 function calculateMousePos(evt){
 	var rect = canvas.getBoundingClientRect();
@@ -114,10 +115,7 @@ function ballReset() {
 		p2 = 0;
 		winScreen = true;
 	}
-	var one = 1;
-	if(p1 <= p2){
-		one *= 1;
-	}
+	one *= -1;
 	ballSpeedX = 5 * one;
 	ballSpeedY = 3;
 	ballX = canvas.width/2;
