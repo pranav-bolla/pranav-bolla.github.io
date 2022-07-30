@@ -66,6 +66,7 @@ const WIN = 3;
 const PADDLE_HEIGHT = 100;
 const THICKNESS = 20;
 var one = 1;
+var oneClone = -1;
 
 function calculateMousePos(evt){
 	var rect = canvas.getBoundingClientRect();
@@ -116,8 +117,9 @@ function ballReset() {
 		winScreen = true;
 	}
 	one *= -1;
+	oneClone *= -1;
 	ballSpeedX = 5 * one;
-	ballSpeedY = 3;
+	ballSpeedY = 3 * oneClone;
 	ballX = canvas.width/2;
 	ballY = canvas.height/2;
 }
