@@ -27,6 +27,24 @@ function calculateMousePos(evt) {
 }
 
 function showGame() {
+   function loadTwitterTimeline() {
+      const twitterTimelineContainer = document.querySelector('.twitter-timeline-container');
+      if (twitterTimelineContainer) {
+          // Remove any existing content in the container (optional)
+          twitterTimelineContainer.innerHTML = '';
+  
+          // Create the Twitter embed iframe
+          const twitterEmbed = document.createElement('iframe');
+          twitterEmbed.setAttribute('src', 'https://platform.twitter.com/widgets/tweet_embed.html?screen_name=pranavbol');
+          twitterEmbed.setAttribute('width', '100%');
+          twitterEmbed.setAttribute('height', '800'); // Adjust the height as needed
+          twitterEmbed.setAttribute('frameborder', '0');
+          twitterEmbed.setAttribute('scrolling', 'no');
+  
+          // Append the Twitter embed iframe to the container
+          twitterTimelineContainer.appendChild(twitterEmbed);
+      }
+  }
    document.getElementById('gameCanvas').style.display = 'block';
    canvas = document.getElementById('gameCanvas');
    canvasContext = canvas.getContext('2d');
