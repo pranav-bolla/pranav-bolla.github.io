@@ -96,7 +96,7 @@ footer p {
 
    position: fixed;
    top: 20px;
-   right: 650px;
+   right: 30%;
 }
 
 @media (max-width: 600px) {
